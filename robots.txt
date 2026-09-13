@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gaslitai.ai/sitemap.xml

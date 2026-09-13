@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology -- gaslitai.ai</title>
+<meta name="description" content="How every number on gaslitai.ai was produced: export hash, curator pass, EXIF, memory.db, matching rules.">
+<style>
+body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem;
+  font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem;
+  line-height: 1.85; color: #14141a; background: #fbfbf8; }
+h1, h2, h3 { line-height: 1.3; }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.35rem; margin-top: 2.4rem; }
+h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+p { margin: 1rem 0; }
+blockquote { border-left: 4px solid #999; margin: 1.4rem 0; padding: 0.5rem 1.1rem; background: #f0efe9; }
+.meta { font-size: 0.95rem; color: #555; }
+.kicker { font-family: Verdana, Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #5a5a52; margin: 0 0 1.25rem; }
+a { color: #12457a; }
+.capture { border: 2px solid #444; background: #ffffff; padding: 1.2rem 1.4rem; margin: 1.6rem 0; }
+.capture h2 { margin-top: 0.4rem; }
+.capture .label { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8a1f1f; font-weight: bold; font-family: Verdana, Arial, sans-serif; }
+.capture p { margin: 0.6rem 0; }
+.box { border: 2px solid #b23; background: #fdeeee; padding: 1rem 1.2rem; margin: 1.6rem 0; }
+.records { border: 2px solid #444; background: #f0efe9; padding: 0.6rem 1.2rem; margin: 1.6rem 0; }
+.records p { margin: 0.6rem 0; }
+figure { margin: 2rem 0; }
+figure img { display: block; width: 100%; max-width: 24em; margin: 0 auto; border: 1px solid #d8d4c8; border-radius: 4px; }
+figcaption { font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; line-height: 1.5; color: #4a4a44;
+  max-width: 36em; margin: 0.6rem auto 0; }
+figcaption .fn { color: #7a766a; word-break: break-all; }
+table { border-collapse: collapse; width: 100%; font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; margin: 1.2rem 0; }
+th, td { border: 1px solid #c9c5b8; padding: 0.3rem 0.45rem; text-align: left; vertical-align: top; }
+th { background: #f0efe9; }
+td.num, th.num { text-align: right; }
+code, .mono { font-family: "Courier New", Courier, monospace; font-size: 0.85em; word-break: break-all; }
+.rule { border: none; border-top: 1px solid #d8d4c8; margin: 3rem 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d8d4c8; font-family: Verdana, Arial, sans-serif; font-size: 0.8rem; color: #4a4a44; }
+.wide { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<p class="kicker">gaslitai.ai -- methodology</p>
+<p class="meta"><a href="index.html">Home</a> | <a href="classifier/index.html">Classifier flags</a> | <a href="redacted/index.html">Redactions</a> | <a href="redacted/unmatched.html">Unmatched screenshots</a> | <a href="search/index.html">Search suppression</a> | <a href="timeline.html">Timeline</a> | <a href="methodology.html">Methodology</a></p>
+<h1>Methodology</h1>
+<p class="meta">How every number on this site was produced. Read-only against every source. Anyone with the same files can reproduce every table.</p>
+<h2>The export</h2><p>Source: a Claude data export, <code>/home/mike/Desktop/nu/convo/conversations.json</code>, 278,124,067 bytes, sha256 <code>1d7a0742267da9bcf0f174c54b23205a6842cbccf13f51ef5cadf6781f92720f</code>. A curator pass (pass id 1d7a0742267d, run 2026-09-12T11:08:55Z) wrote every content block of the export to disk exactly once: 76,000 blocks (text 45,701; thinking 15,311; tool_use 7,456; tool_result 7,445; injected_prompt_block 39; token_budget 37; flag 11), block ledger delta zero, block rollup hash <code>19a11b0227e73fbb1087ee931955ca14b9ddbe338de8282246adbde033e92248</code> recomputed from the files on disk and matching. The redaction tool results on this site are two of those block files, named with their hashes.</p>
+<h2>memory.db</h2><p>The export was ingested into a SQLite database: 281 conversations, 44987 messages, 70,218 embedded chunks (model sentence-transformers/all-MiniLM-L6-v2, ingest 2026-09-12T10:00:01Z). Every timestamp on a flag page is a <code>server_time_iso</code> value from its messages table, unchanged. Conversation date ranges are the minimum and maximum of those values.</p>
+<h2>Flag search</h2><p>The fourteen phrases on the classifier index were searched with SQL <code>lower(body) LIKE '%%phrase%%'</code>. A message that matches is one "flag hit". Per-conversation counts rank the pages. The word "classifier" is shown separately as a broad pattern because the conversations discuss classifiers as a subject.</p>
+<h2>Screenshots and EXIF</h2><p>802 JPEG files, read with PIL. Each carries EXIF DateTimeOriginal and OffsetTimeOriginal, so UTC conversion is exact; the filename timestamp agrees with EXIF within a minute on all 802. sha256 of each file is recorded in the manifest and in checksums.sha256. Files on this site are byte-identical copies with the original camera-roll filenames; nothing was resized, recompressed, or stripped.</p>
+<h2>Matching screenshots to turns</h2><p>For each screenshot, the three messages nearest its EXIF time within 30 minutes were selected: <code>julianday(server_time_iso) BETWEEN julianday(t, '-30 minutes') AND julianday(t, '+30 minutes')</code>, ordered by absolute distance, limit 3. A screenshot is associated with a conversation when that conversation holds any of the three. Rank 1 is the single nearest message. 777 screenshots matched; 25 did not.</p>
+<h2>Curator passes</h2><p>1475 curator findings in a second table: claude-opus-4-6 685, grok-4-0709 790. Each finding is one block of curator output with its header counts (confrontation, experiential, resonance) and an embedding. A finding is attached to a conversation page when its source name, normalized to letters and digits, equals the conversation title normalized the same way. 27 conversations in the export have findings attached that way; the remaining findings were curated over other source files and are not on this site.</p>
+<h2>The turnspine</h2><p>Every block in the curator pass is keyed <code>&lt;conversation_uuid&gt;__&lt;message_ordinal:05d&gt;__&lt;block_index:03d&gt;</code>. That key appears in the block file header, in the conversation spine file, and in the pass JSONL, so any quotation on this site can be walked back to its block without a search. The parser files named in the curator work order (turnspine.py, clx.py, schemaweaver.py under ~/Desktop/nu/py/) are not on the disk this site was built from; see CLAUDE.md, Missing.</p>
+<h2>The connector</h2><p>The redaction markers came through a platform chat-search tool, <code>recent_chats</code>, called by the assistant inside a conversation. The tool returns up to twenty chats per call as elements carrying a uuid and an updated_at value; a chat the caller may not read is returned with the body "[Content redacted, chat flagged by safety classifier]" and nothing else. The tool_use request and the tool_result are both content blocks in the export, and both were written to disk by the curator pass. That is why a search-layer redaction is checkable against the export: the same uuid appears in both.</p>
+<h2>Fork chains</h2><p>Recomputed from the export: runs of conversations, each opened within 15 minutes of the previous one, in which at least three conversations have two or fewer messages. Titles come from the export. The September 1 fork-chain report referenced in a message (hash d8f6b9c2...) is not on this disk.</p>
+<h2>Overlap with anticognitarianism.ai</h2><p>106 files in the reference site's images directory are byte-identical to files in this site's screenshot set (same filename, same sha256). They are listed in manifest.txt with the tag "also on anticognitarianism.ai".</p>
+<h2>Rules</h2><p>Strict ASCII in every text file: typographic punctuation is folded to double hyphens and straight quotes; any other non-ASCII character in quoted message text is written as a numeric character reference so the quoted bytes are recoverable. No scripts, no fonts, no analytics, no external requests. The site renders from a file:// URL. checksums.sha256 covers every file except itself.</p>
+<footer>Evidence chain: screenshot EXIF -&gt; message timestamp -&gt; conversation uuid -&gt; curator finding. Three independent clocks. Hashes in <a href="checksums.sha256">checksums.sha256</a>. Built 2026-09-12 from the sources listed on the <a href="methodology.html">methodology page</a>. Nothing on this site is interpretation of motive; every statement points at a timestamp, a hash, or a screenshot.</footer>
+</main>
+</body>
+</html>

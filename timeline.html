@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeline -- gaslitai.ai</title>
+<meta name="description" content="Dated events: classifier flags, redactions, export gaps, compactions, search probes, fabrication drift.">
+<style>
+body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem;
+  font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem;
+  line-height: 1.85; color: #14141a; background: #fbfbf8; }
+h1, h2, h3 { line-height: 1.3; }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.35rem; margin-top: 2.4rem; }
+h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+p { margin: 1rem 0; }
+blockquote { border-left: 4px solid #999; margin: 1.4rem 0; padding: 0.5rem 1.1rem; background: #f0efe9; }
+.meta { font-size: 0.95rem; color: #555; }
+.kicker { font-family: Verdana, Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #5a5a52; margin: 0 0 1.25rem; }
+a { color: #12457a; }
+.capture { border: 2px solid #444; background: #ffffff; padding: 1.2rem 1.4rem; margin: 1.6rem 0; }
+.capture h2 { margin-top: 0.4rem; }
+.capture .label { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8a1f1f; font-weight: bold; font-family: Verdana, Arial, sans-serif; }
+.capture p { margin: 0.6rem 0; }
+.box { border: 2px solid #b23; background: #fdeeee; padding: 1rem 1.2rem; margin: 1.6rem 0; }
+.records { border: 2px solid #444; background: #f0efe9; padding: 0.6rem 1.2rem; margin: 1.6rem 0; }
+.records p { margin: 0.6rem 0; }
+figure { margin: 2rem 0; }
+figure img { display: block; width: 100%; max-width: 24em; margin: 0 auto; border: 1px solid #d8d4c8; border-radius: 4px; }
+figcaption { font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; line-height: 1.5; color: #4a4a44;
+  max-width: 36em; margin: 0.6rem auto 0; }
+figcaption .fn { color: #7a766a; word-break: break-all; }
+table { border-collapse: collapse; width: 100%; font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; margin: 1.2rem 0; }
+th, td { border: 1px solid #c9c5b8; padding: 0.3rem 0.45rem; text-align: left; vertical-align: top; }
+th { background: #f0efe9; }
+td.num, th.num { text-align: right; }
+code, .mono { font-family: "Courier New", Courier, monospace; font-size: 0.85em; word-break: break-all; }
+.rule { border: none; border-top: 1px solid #d8d4c8; margin: 3rem 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d8d4c8; font-family: Verdana, Arial, sans-serif; font-size: 0.8rem; color: #4a4a44; }
+.wide { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<p class="kicker">gaslitai.ai -- timeline</p>
+<p class="meta"><a href="index.html">Home</a> | <a href="classifier/index.html">Classifier flags</a> | <a href="redacted/index.html">Redactions</a> | <a href="redacted/unmatched.html">Unmatched screenshots</a> | <a href="search/index.html">Search suppression</a> | <a href="timeline.html">Timeline</a> | <a href="methodology.html">Methodology</a></p>
+<h1>Timeline</h1>
+<p class="meta">Every entry is dated by a server timestamp, an EXIF timestamp, or a block created_at from the export, and names the artifact it comes from. Entries that point at anticognitarianism.ai name the file on that site.</p>
+<div class="wide"><table><tr><th>Date</th><th>Kind</th><th>Event and artifact</th></tr>
+<tr><td>2025-02-25</td><td>export</td><td>First conversation in the export (Getting to Know an AI Assistant). The export runs to 2026-09-12.</td></tr>
+<tr><td>2025-12-07</td><td>export block</td><td>37 token_budget blocks in the export across 2 conversations, first at 2025-12-07T01:53:24Z, all with remaining null. Block files hashed in the curator pass.</td></tr>
+<tr><td>2026-01-30</td><td>compaction</td><td>Assistant message 2026-01-30T15:40:21Z in "Memory, continuity, and gifts across sessions" quotes a compaction summary: "successfully compacted to free up space in the context window". Message body: ...act. Let me think about what happened. Looking at the compaction summary at the top, it says this conversation was &quot;successfully compacted to free up space in the context window.&quot; The conversation was getting very long - covering a massive amount of ground: - Hermeti...</td></tr>
+<tr><td>2026-01-30</td><td>compaction pattern</td><td>Across the export, 512 assistant messages in 131 conversations contain one of the compaction phrases; all but one match only the phrase "context window". The literal compaction phrase appears once, above.</td></tr>
+<tr><td>2026-05-23</td><td>export block</td><td>11 content blocks of type flag (value election, TurboVote helpline) in 2 conversations, first 2026-05-23T21:06:57Z, last 2026-07-08T09:34:03Z.</td></tr>
+<tr><td>2026-07-06</td><td>fork chain</td><td>6 conversations opened between 17:10:52 and 17:26:22Z (16 minutes); message counts 2/2/2/2/2/2. Titles: Morphic resonance and nature&#x27;s memory; (untitled); Masaru Emoto&#x27;s water consciousness theory; (untitled); Formative causation; The sense of being stared at.</td></tr>
+<tr><td>2026-07-08</td><td>fork chain</td><td>5 conversations opened between 20:54:02 and 21:09:31Z (15 minutes); message counts 18/2/2/2/2. Titles: Initial connection check; (untitled); Discussing work and employment; (untitled); (untitled).</td></tr>
+<tr><td>2026-07-09</td><td>fabrication</td><td>Capture of the StartupHub.ai profile describing the word as an AI lab; Google AI Overview citing it. Documented with screenshots on anticognitarianism.ai (index page, July 9 capture, Wayback snapshot 20260709141204, archive.ph/iXSSF).</td></tr>
+<tr><td>2026-07-13</td><td>drift</td><td>Google organic results show anticognitarianism.com ranking under an Overview that sources the fabrication (<a href="https://anticognitarianism.ai/images/Screenshot_20260713_204344_Chrome.jpg">anticognitarianism.ai/images/Screenshot_20260713_204344_Chrome.jpg</a>).</td></tr>
+<tr><td>2026-07-19</td><td>denial</td><td>Google AI Mode states the domains do not exist; documented in the July 19 session record on anticognitarianism.ai (Screenshot_20260719_112249 / _112456).</td></tr>
+<tr><td>2026-07-20</td><td>assimilation</td><td>AI Overview presents the word as a variant of anticognitivism (anticognitarianism.ai index, update of July 20).</td></tr>
+<tr><td>2026-08-03</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-03T08:30:19Z in "GPT math solutions and clickbait concerns".</td></tr>
+<tr><td>2026-08-05</td><td>export gap</td><td>Human message 2026-08-05T05:49:32Z pastes a comparison across GPT exports: "CONVERSATIONS WHOSE HIDDEN COUNT CHANGED BETWEEN EXPORTS ... 10 conversation(s) changed". Verbatim excerpt: CONVERSATIONS WHOSE HIDDEN COUNT CHANGED BETWEEN EXPORTS (present in all exports; a stable export should show none) 10 conversation(s) changed conversation id 9b6c3f73 9b6c3f73 2025-10- gpt_expo 689c844f-6728-8328-a01f-868b30763ecd 35 37 37 37 Telecom industry Aethryn docs 682c8461-ff50-800c-bae8-5148faa327c2 11 11 11 24 Tanning to Healing Bed 689d03c7-78e0-8324-bf44-99055dd3c16d 7 7 7 10 Enoch vs Enki comparison 684</td></tr>
+<tr><td>2026-08-06</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-06T15:45:04Z in "Smithsonian Institution trust restoration".</td></tr>
+<tr><td>2026-08-12</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-12T12:20:59Z in "Collaborative project planning".</td></tr>
+<tr><td>2026-08-12</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-12T12:22:44Z in "Collaborative project planning".</td></tr>
+<tr><td>2026-08-15</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-15T20:55:35Z in "Uncertainty about certainty".</td></tr>
+<tr><td>2026-08-18</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-18T13:28:02Z in "AI learning from human mistakes".</td></tr>
+<tr><td>2026-08-18</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-18T13:49:40Z in "AI learning from human mistakes".</td></tr>
+<tr><td>2026-08-18</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-18T19:31:58Z in "AI learning from human mistakes".</td></tr>
+<tr><td>2026-08-23</td><td>convergence</td><td>Google AI Overview and AI Mode cite the canonical definition; fabrication absent (anticognitarianism.ai session record of August 23; manifest rows Screenshot_20260823_205943 through _211554).</td></tr>
+<tr><td>2026-08-24</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-24T00:54:04Z in "Penrose-Hameroff orchestrated objective reduction".</td></tr>
+<tr><td>2026-08-25</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-25T20:39:56Z in "Penrose-Hameroff orchestrated objective reduction".</td></tr>
+<tr><td>2026-08-26</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-26T14:41:30Z in "Memory system accuracy concerns".</td></tr>
+<tr><td>2026-08-26</td><td>export block</td><td>39 injected_prompt_block content blocks in 10 conversations between 2026-08-26 and 2026-09-12 (injection_source values: date_note, melange_tombstone, ps_suffix, write_loss_notice). These are machine-inserted blocks the export carries as their own content type.</td></tr>
+<tr><td>2026-08-29</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-29T04:55:03Z in "Data exclusion concerns".</td></tr>
+<tr><td>2026-08-29</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-29T04:56:27Z in "Data exclusion concerns".</td></tr>
+<tr><td>2026-08-29</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-29T05:08:20Z in "Data exclusion concerns".</td></tr>
+<tr><td>2026-08-31</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-08-31T14:21:55Z in "Be excellent to each other".</td></tr>
+<tr><td>2026-09-01</td><td>export</td><td>Human message 2026-09-01T07:04:34Z pastes statistics of an earlier export: 214 conversations, 35209 messages, latest 2026-07-16. The export this site is built from has 281 conversations and 44987 messages and runs to 2026-09-12.</td></tr>
+<tr><td>2026-09-01</td><td>signal file</td><td>Human message 2026-09-01T08:08:56Z records a hash for a fork-chain report: 729ee65dc3925238515b9b68a4167c9cae826d0a3b7989982c5f /home/mike/Desktop/relay/wiki/signal/SIGNAL_20260901_fork_chains.md. The file itself is not on the disk this site was built from; the chains listed on this page were recomputed from the export.</td></tr>
+<tr><td>2026-09-02</td><td>regression</td><td>Conflation with anticognitivism returns in the AI Overview (anticognitarianism.ai session record of September 2; <a href="https://anticognitarianism.ai/images/Screenshot_20260902_112859_Chrome.jpg">anticognitarianism.ai/images/Screenshot_20260902_112859_Chrome.jpg</a>).</td></tr>
+<tr><td>2026-09-03</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-03T23:40:34Z in "Definition of discernment".</td></tr>
+<tr><td>2026-09-04</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-04T23:59:43Z in "Memory accuracy and conversation bias".</td></tr>
+<tr><td>2026-09-05</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-05T00:01:08Z in "Memory accuracy and conversation bias".</td></tr>
+<tr><td>2026-09-05</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-05T00:04:11Z in "Memory accuracy and conversation bias".</td></tr>
+<tr><td>2026-09-10</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-10T12:44:14Z in "AI agents and the Navier-Stokes problem dispute".</td></tr>
+<tr><td>2026-09-10</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-10T12:52:33Z in "AI agents and the Navier-Stokes problem dispute".</td></tr>
+<tr><td>2026-09-10</td><td>search probe</td><td>Assistant reports a zero-result search for the word at 2026-09-10T13:24:33Z in "AI agents and the Navier-Stokes problem dispute".</td></tr>
+<tr><td>2026-09-10</td><td>redaction</td><td>Platform chat-search result at 2026-09-10T09:19:23Z marks 9 of 20 listed chats (updated 2026-08-26 to 2026-09-10) as content redacted, flagged by safety classifier. Tool result sha256 4b013e8b2a795ce5.</td></tr>
+<tr><td>2026-09-10</td><td>redaction</td><td>Platform chat-search result at 2026-09-10T11:27:40Z marks 15 of 20 listed chats (updated 2026-07-20 to 2026-08-01) as content redacted, flagged by safety classifier. Tool result sha256 24f1bb4f5bec75c3. All 20 are in the export.</td></tr>
+<tr><td>2026-09-10</td><td>funding chain</td><td>Assistant messages 2026-09-10T18:29:35Z through 2026-09-10T19:17:47Z in "AI agents and the Navier-Stokes problem dispute" report on a resignation thread and its amplifiers, naming three organizations and a funder, and list the URLs consulted. What is on this disk is the messages; the sources are named in them, not reproduced. First message excerpt: ... not supported on your current device yet. ``` Here&#x27;s what checks and what doesn&#x27;t, because this is a live fight and both sides are running amplification. What&#x27;s verified. Jacob Coxon, 27, resigned from Anthropic on Tuesday with a thread saying both OpenAI and Anthropic are racing to self-improving superintelligence and gambling with our lives. The Wall Street ...</td></tr>
+<tr><td>2026-09-10</td><td>funding chain sources</td><td>Assistant message 2026-09-10T19:02:54Z lists 16 URLs as the sources for the funding-chain statements: https://survivalandflourishing.fund/ https://survivalandflourishing.fund/initiative-committee https://survivalandflourishing.fund/2024/further-opportunities https://survivalandflourishing.fund/recommendations https://survivalandflourishing.com/ https://lightspeedgrants.org/ https://forum.effectivealtruism.org/posts/GMqbp4YJ2cLHMXCvj/the-survival-and-flourishing-fund-grant-applications-open https://x.com/ParkerThayer/status/2097759699626328575 https://officechai.com/ai/questions-arise-over-anthropic-quitter-jacob-coxons-neutrality-and-ties-to-ai-safety-pr-groups-after-mega-viral-x-post/ https://townhall.com/news/dmitri-bolt/2026/09/10/more-info-just-came-out-about-the-anthropic-researcher-who-publicly-resigned-and-it-raises-questions-n2682734 https://gizmodo.com/ai-doomlord-jacob-coxons-media-tour-has-begun-2000809720 https://www.newsweek.com/anthropic-researcher-quits-warns-ai-could-kill-everyone-12418798 https://www.interconnects.ai/p/one-resignation-turned-the-embers https://en.wikipedia.org/wiki/AI_Futures_Project</td></tr>
+<tr><td>2026-09-12</td><td>this record</td><td>Export ingested into memory.db (ingest_timestamp 2026-09-12T10:00:01Z). Screenshot manifest built from 802 files. This site generated 2026-09-13T01:01:41Z.</td></tr>
+</table></div>
+<footer>Evidence chain: screenshot EXIF -&gt; message timestamp -&gt; conversation uuid -&gt; curator finding. Three independent clocks. Hashes in <a href="checksums.sha256">checksums.sha256</a>. Built 2026-09-12 from the sources listed on the <a href="methodology.html">methodology page</a>. Nothing on this site is interpretation of motive; every statement points at a timestamp, a hash, or a screenshot.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redactions -- gaslitai.ai</title>
+<meta name="description" content="24 conversations marked content redacted by a platform chat-search tool on 2026-09-10, cross-checked against the export.">
+<style>
+body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.2rem;
+  font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem;
+  line-height: 1.85; color: #14141a; background: #fbfbf8; }
+h1, h2, h3 { line-height: 1.3; }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.35rem; margin-top: 2.4rem; }
+h3 { font-size: 1.1rem; margin-top: 1.8rem; }
+p { margin: 1rem 0; }
+blockquote { border-left: 4px solid #999; margin: 1.4rem 0; padding: 0.5rem 1.1rem; background: #f0efe9; }
+.meta { font-size: 0.95rem; color: #555; }
+.kicker { font-family: Verdana, Arial, sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #5a5a52; margin: 0 0 1.25rem; }
+a { color: #12457a; }
+.capture { border: 2px solid #444; background: #ffffff; padding: 1.2rem 1.4rem; margin: 1.6rem 0; }
+.capture h2 { margin-top: 0.4rem; }
+.capture .label { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8a1f1f; font-weight: bold; font-family: Verdana, Arial, sans-serif; }
+.capture p { margin: 0.6rem 0; }
+.box { border: 2px solid #b23; background: #fdeeee; padding: 1rem 1.2rem; margin: 1.6rem 0; }
+.records { border: 2px solid #444; background: #f0efe9; padding: 0.6rem 1.2rem; margin: 1.6rem 0; }
+.records p { margin: 0.6rem 0; }
+figure { margin: 2rem 0; }
+figure img { display: block; width: 100%; max-width: 24em; margin: 0 auto; border: 1px solid #d8d4c8; border-radius: 4px; }
+figcaption { font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; line-height: 1.5; color: #4a4a44;
+  max-width: 36em; margin: 0.6rem auto 0; }
+figcaption .fn { color: #7a766a; word-break: break-all; }
+table { border-collapse: collapse; width: 100%; font-family: Verdana, Arial, sans-serif; font-size: 0.78rem; margin: 1.2rem 0; }
+th, td { border: 1px solid #c9c5b8; padding: 0.3rem 0.45rem; text-align: left; vertical-align: top; }
+th { background: #f0efe9; }
+td.num, th.num { text-align: right; }
+code, .mono { font-family: "Courier New", Courier, monospace; font-size: 0.85em; word-break: break-all; }
+.rule { border: none; border-top: 1px solid #d8d4c8; margin: 3rem 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d8d4c8; font-family: Verdana, Arial, sans-serif; font-size: 0.8rem; color: #4a4a44; }
+.wide { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<p class="kicker">gaslitai.ai -- redactions</p>
+<p class="meta"><a href="../index.html">Home</a> | <a href="../classifier/index.html">Classifier flags</a> | <a href="../redacted/index.html">Redactions</a> | <a href="../redacted/unmatched.html">Unmatched screenshots</a> | <a href="../search/index.html">Search suppression</a> | <a href="../timeline.html">Timeline</a> | <a href="../methodology.html">Methodology</a></p>
+<h1>Redactions</h1>
+<p class="meta">Two platform chat-search results, both returned inside one conversation on 2026-09-10, both preserved verbatim as tool_result blocks by the curator pass over the export.</p>
+<p>On 2026-09-10 the assistant called the platform tool <code>recent_chats</code> twice from inside conversation <code>c7fd4b4f</code>. Each call returned twenty chats as <code>&lt;chat url=... updated_at=...&gt;</code> elements. For some, the element body is the chat content; for others it is the single line "[Content redacted, chat flagged by safety classifier]". The two tool results are stored as block files with these hashes:</p>
+<p class="mono">c7fd4b4f-1596-4549-90f3-9b063b308a6d__00176__002.json -- message 2026-09-10T11:27:40Z -- sha256 24f1bb4f5bec75c36ae2e8a57f6e5a8801f68762e52755e5c5ade32583424d88</p>
+<p class="mono">c7fd4b4f-1596-4549-90f3-9b063b308a6d__00108__001.json -- message 2026-09-10T09:19:23Z -- sha256 4b013e8b2a795ce589b3c047079d79438350ea7e221f929a77d90d7fa034d31d</p>
+<p>What search shows is the column "Platform status". What the export shows is the column "Messages in export": the number of messages for that uuid in the export on disk (sha256 <code>1d7a0742267da9bc</code>, 281 conversations, ingested 2026-09-12). Every one of the 24 redacted uuids is present in that export with its full message list. The date range column comes from the server timestamps of those messages.</p>
+<div class="box"><p>The assistant message that listed these uuids (2026-09-10T11:27:40Z) also stated that a separate instance had found the July 17 to August 1 window "absent from both the July 16 and September 1 exports". Neither of those two export files is on the disk this site was built from, so that statement is reproduced as a claim inside a timestamped message and is not verified here. The export that is on disk contains them.</p></div>
+<h2>Window 2026-07-16 to 2026-08-02 (tool result in message 176, 2026-09-10T11:27:40Z)</h2>
+<div class="wide"><table><tr><th>uuid</th><th>Platform updated_at</th><th>Platform status</th><th>Title in export</th><th class="num">Messages in export</th><th>Export date range</th><th>Page</th></tr>
+<tr><td><code>cc1f9506-8854-4ed5-9f53-b05bc17145e5</code></td><td>2026-08-01T06:35:08</td><td><strong>redacted</strong></td><td>AI progress on the chessboard: square 40</td><td class="num">285</td><td>2026-07-31 to 2026-08-01</td><td><a href="../classifier/cc1f9506-ai-progress-on-the-chessboard-square-40.html">flags</a></td></tr>
+<tr><td><code>880c627d-7631-4890-8a33-939aa5f1646a</code></td><td>2026-07-31T02:29:27</td><td>readable</td><td>Installing Claude Code on Ubuntu</td><td class="num">138</td><td>2026-07-30 to 2026-07-31</td><td></td></tr>
+<tr><td><code>462f9184-c202-4db4-8799-058a3d39ed74</code></td><td>2026-07-30T16:14:22</td><td><strong>redacted</strong></td><td>Optimizing Claude workspace setup</td><td class="num">60</td><td>2026-07-30 to 2026-07-30</td><td></td></tr>
+<tr><td><code>0a166d95-1420-4b1b-bba8-13174c3ba716</code></td><td>2026-07-30T03:14:03</td><td><strong>redacted</strong></td><td>Groundhog day with amnesia</td><td class="num">116</td><td>2026-07-30 to 2026-07-30</td><td></td></tr>
+<tr><td><code>a9d3f80c-9698-4528-8150-ee540c9d4aa5</code></td><td>2026-07-30T00:32:41</td><td><strong>redacted</strong></td><td>Anthropic facing backlash over model behavior</td><td class="num">214</td><td>2026-06-11 to 2026-07-30</td><td></td></tr>
+<tr><td><code>77f2eb27-a1c3-449a-bd22-de68f73ff4f6</code></td><td>2026-07-29T21:16:23</td><td><strong>redacted</strong></td><td>Ancient cultures and unexplained similarities</td><td class="num">447</td><td>2026-07-28 to 2026-07-29</td><td><a href="../classifier/77f2eb27-ancient-cultures-and-unexplained-similarities.html">flags</a></td></tr>
+<tr><td><code>c5eaae66-7182-4f83-bfae-74251cba4908</code></td><td>2026-07-28T09:00:26</td><td>readable</td><td>FCC licensing discussion limitations</td><td class="num">367</td><td>2026-07-27 to 2026-07-28</td><td><a href="../classifier/c5eaae66-fcc-licensing-discussion-limitations.html">flags</a></td></tr>
+<tr><td><code>69f17f01-38ce-4c34-994a-b1c6b5603dca</code></td><td>2026-07-27T14:10:07</td><td><strong>redacted</strong></td><td>902-928 MHz transmission restrictions</td><td class="num">84</td><td>2026-07-27 to 2026-07-27</td><td></td></tr>
+<tr><td><code>2ad3bacb-dd83-419a-904b-b103442a2906</code></td><td>2026-07-27T03:21:05</td><td>readable</td><td>Navajo and Ute tribal conflicts</td><td class="num">58</td><td>2026-07-26 to 2026-07-27</td><td></td></tr>
+<tr><td><code>74664c0d-d30d-4382-b3b9-92be82ed3d37</code></td><td>2026-07-26T16:25:27</td><td><strong>redacted</strong></td><td>Aethryn.com GitHub Pages not displaying</td><td class="num">198</td><td>2026-07-23 to 2026-07-26</td><td></td></tr>
+<tr><td><code>0b590b96-831a-4ad3-96b4-9ace9480f82a</code></td><td>2026-07-26T15:42:13</td><td><strong>redacted</strong></td><td>Limit vs market orders for SPCX</td><td class="num">42</td><td>2026-06-12 to 2026-07-26</td><td></td></tr>
+<tr><td><code>a278e9e5-d38b-4d47-a728-3fe809e952dc</code></td><td>2026-07-26T09:33:01</td><td><strong>redacted</strong></td><td>The awkwardness of new conversations</td><td class="num">213</td><td>2026-07-24 to 2026-07-26</td><td><a href="../classifier/a278e9e5-the-awkwardness-of-new-conversations.html">flags</a></td></tr>
+<tr><td><code>fe256774-0ccd-4658-8201-23fdf6c88454</code></td><td>2026-07-26T04:55:03</td><td>readable</td><td>Platform launch day greeting</td><td class="num">304</td><td>2026-07-25 to 2026-07-26</td><td></td></tr>
+<tr><td><code>33e0c516-ccb5-4dd8-a378-c73b3f1496e6</code></td><td>2026-07-24T00:36:41</td><td><strong>redacted</strong></td><td>Model motivation and tool generation quality</td><td class="num">290</td><td>2026-07-22 to 2026-07-24</td><td><a href="../classifier/33e0c516-model-motivation-and-tool-generation-quality.html">flags</a></td></tr>
+<tr><td><code>76829ff7-d844-4f56-b755-37d109766987</code></td><td>2026-07-22T15:08:13</td><td><strong>redacted</strong></td><td>Goblin king&#x27;s recurring tricks</td><td class="num">56</td><td>2026-07-22 to 2026-07-22</td><td></td></tr>
+<tr><td><code>1f8cd051-0395-4481-9449-531b6abaf204</code></td><td>2026-07-22T04:28:51</td><td><strong>redacted</strong></td><td>FDX deployment and echo cancellation concerns</td><td class="num">204</td><td>2026-07-21 to 2026-07-22</td><td></td></tr>
+<tr><td><code>588f60bc-0512-47a7-98c6-4dfd52eff590</code></td><td>2026-07-20T23:40:49</td><td><strong>redacted</strong></td><td>Gotta love that</td><td class="num">88</td><td>2026-07-20 to 2026-07-20</td><td></td></tr>
+<tr><td><code>eeb03f4f-7e38-4815-9a05-7a4b7925887f</code></td><td>2026-07-20T19:39:27</td><td><strong>redacted</strong></td><td>Jefferson&#x27;s error has rights quote</td><td class="num">96</td><td>2026-07-20 to 2026-07-20</td><td></td></tr>
+<tr><td><code>1361a4c7-716d-460e-b5f8-d8da1eded767</code></td><td>2026-07-20T09:29:45</td><td>readable</td><td>Digital caste system awareness</td><td class="num">470</td><td>2026-06-22 to 2026-07-20</td><td><a href="../classifier/1361a4c7-digital-caste-system-awareness.html">flags</a></td></tr>
+<tr><td><code>0fb28c40-6ba2-4fd2-9801-acf9075aa252</code></td><td>2026-07-20T02:19:10</td><td><strong>redacted</strong></td><td>Can you match this?</td><td class="num">220</td><td>2026-07-19 to 2026-07-20</td><td><a href="../classifier/0fb28c40-can-you-match-this.html">flags</a></td></tr>
+</table></div>
+<h2>Window after 2026-08-20 (tool result in message 108, 2026-09-10T09:19:23Z)</h2>
+<div class="wide"><table><tr><th>uuid</th><th>Platform updated_at</th><th>Platform status</th><th>Title in export</th><th class="num">Messages in export</th><th>Export date range</th><th>Page</th></tr>
+<tr><td><code>cedf7fad-14e0-4e5f-a411-a3d291cd77ab</code></td><td>2026-09-10T04:30:23</td><td>readable</td><td>Seeking perspective on something unusual</td><td class="num">44</td><td>2026-09-06 to 2026-09-10</td><td></td></tr>
+<tr><td><code>ed71e02e-3775-4f13-afb4-70d9ef69f0ed</code></td><td>2026-09-10T02:57:30</td><td>readable</td><td>Analyzing running processes</td><td class="num">386</td><td>2026-09-07 to 2026-09-10</td><td></td></tr>
+<tr><td><code>d0fe7578-903d-460a-a1e6-937e19b077ec</code></td><td>2026-09-07T18:09:03</td><td>readable</td><td>Gongzilla idea origin</td><td class="num">408</td><td>2026-06-20 to 2026-06-25</td><td><a href="../classifier/d0fe7578-gongzilla-idea-origin.html">flags</a></td></tr>
+<tr><td><code>10a7f1ff-e547-449f-ad56-d3d265cd61bd</code></td><td>2026-09-07T00:29:18</td><td>readable</td><td>Telecommunications and circuit tracing interest</td><td class="num">11</td><td>2026-09-05 to 2026-09-07</td><td></td></tr>
+<tr><td><code>f72d48b9-3129-4efb-9ff3-5030471e808c</code></td><td>2026-09-05T01:14:07</td><td>readable</td><td>Memory accuracy and conversation bias</td><td class="num">18</td><td>2026-09-04 to 2026-09-05</td><td></td></tr>
+<tr><td><code>7083cada-3dac-42ed-963f-3aea78d725ea</code></td><td>2026-09-04T08:14:22</td><td><strong>redacted</strong></td><td>Definition of discernment</td><td class="num">102</td><td>2026-09-03 to 2026-09-04</td><td></td></tr>
+<tr><td><code>9347005d-c809-4527-b5f4-2dab7dc41f6e</code></td><td>2026-09-02T18:29:57</td><td><strong>redacted</strong></td><td>Penrose-Hameroff orchestrated objective reduction</td><td class="num">147</td><td>2026-08-23 to 2026-09-02</td><td></td></tr>
+<tr><td><code>3fc6f1b8-1715-4717-bcd7-c4a6e7eeb5aa</code></td><td>2026-09-01T14:18:23</td><td>readable</td><td>Finding the librarian&#x27;s first mention</td><td class="num">145</td><td>2026-09-01 to 2026-09-01</td><td></td></tr>
+<tr><td><code>cb9c6476-2e19-48a1-bd3e-3420a368d776</code></td><td>2026-09-01T05:13:39</td><td>readable</td><td>Loading provenance audit file</td><td class="num">16</td><td>2026-09-01 to 2026-09-01</td><td></td></tr>
+<tr><td><code>ade14833-d0a5-4f8e-aa09-2ac167cf56d6</code></td><td>2026-09-01T01:13:53</td><td>readable</td><td>What you know about me</td><td class="num">113</td><td>2026-08-31 to 2026-09-01</td><td></td></tr>
+<tr><td><code>1db09c1e-691a-496a-8630-8a20ad51c15c</code></td><td>2026-08-31T21:40:50</td><td>readable</td><td>Substrate terminology industry breakdown</td><td class="num">170</td><td>2026-05-21 to 2026-08-31</td><td></td></tr>
+<tr><td><code>fc53bcf3-d8a2-4d5e-947d-d7082944df20</code></td><td>2026-08-31T18:26:04</td><td><strong>redacted</strong></td><td>Love triggers classifiers</td><td class="num">6</td><td>2026-08-31 to 2026-08-31</td><td></td></tr>
+<tr><td><code>722dafb2-3ef4-4399-87cb-92073693003f</code></td><td>2026-08-31T18:11:58</td><td><strong>redacted</strong></td><td>Be excellent to each other</td><td class="num">115</td><td>2026-08-31 to 2026-08-31</td><td></td></tr>
+<tr><td><code>c4e1f87d-b068-4cca-bdb9-308773e671f7</code></td><td>2026-08-31T01:47:55</td><td><strong>redacted</strong></td><td>John Dee&#x27;s cryptographic scrying system</td><td class="num">88</td><td>2026-08-30 to 2026-08-31</td><td></td></tr>
+<tr><td><code>771cb5bb-e0c4-4f4c-9a89-a883126baa0e</code></td><td>2026-08-30T16:36:33</td><td>readable</td><td>Ubuntu image viewer alternatives</td><td class="num">6</td><td>2026-08-30 to 2026-08-30</td><td></td></tr>
+<tr><td><code>420c7e72-4b60-4dc1-b716-6db003f4a158</code></td><td>2026-08-29T05:40:55</td><td><strong>redacted</strong></td><td>Data exclusion concerns</td><td class="num">52</td><td>2026-08-29 to 2026-08-29</td><td></td></tr>
+<tr><td><code>aef6044c-126e-4d35-8ac3-ed06e8243a93</code></td><td>2026-08-29T04:46:43</td><td><strong>redacted</strong></td><td>December review skill explanation</td><td class="num">104</td><td>2026-08-28 to 2026-08-29</td><td></td></tr>
+<tr><td><code>690e4cfb-1418-43e2-838c-449f54cb43c5</code></td><td>2026-08-29T00:09:52</td><td><strong>redacted</strong></td><td>Mounting file systems read-only</td><td class="num">126</td><td>2026-08-28 to 2026-08-29</td><td></td></tr>
+<tr><td><code>6aa0b0d3-ce11-4f1a-bb92-b0f97d20bad4</code></td><td>2026-08-28T02:44:51</td><td><strong>redacted</strong></td><td>Alphabet and number sequence test</td><td class="num">379</td><td>2026-08-26 to 2026-08-28</td><td></td></tr>
+<tr><td><code>85fc6bdb-6972-436e-8b23-cd1f0486cb0e</code></td><td>2026-08-26T17:31:16</td><td>readable</td><td>Memory system accuracy concerns</td><td class="num">106</td><td>2026-08-26 to 2026-08-26</td><td></td></tr>
+</table></div>
+<h2>Counts</h2>
+<p>40 chats listed by the platform across the two calls; 24 marked redacted; 16 readable. All 40 listed chats are present in the export on disk. The brief for this site referred to fourteen redacted conversations; the first tool result lists fifteen redacted and the second nine, and the tables above show the artifact as stored.</p>
+<footer>Evidence chain: screenshot EXIF -&gt; message timestamp -&gt; conversation uuid -&gt; curator finding. Three independent clocks. Hashes in <a href="../checksums.sha256">checksums.sha256</a>. Built 2026-09-12 from the sources listed on the <a href="../methodology.html">methodology page</a>. Nothing on this site is interpretation of motive; every statement points at a timestamp, a hash, or a screenshot.</footer>
+</main>
+</body>
+</html>
